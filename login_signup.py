@@ -40,7 +40,7 @@ class login_signup:
             login_signup.forgot_password()
 
     def verify_login(username, password):
-        ss = ezsheets.Spreadsheet('152M9yVlljFVDf5Nnd2oBjWfvxf5Sfy2n2H7Sz5__1F4') # the spreadsheet ID
+        # ss = ezsheets.Spreadsheet('152M9yVlljFVDf5Nnd2oBjWfvxf5Sfy2n2H7Sz5__1F4') # the spreadsheet ID
         sheet = ss[0]  # the first sheet
 
         emails = sheet.getColumn(7)[4:]  # Column G, starting from row 5
@@ -112,7 +112,7 @@ class login_signup:
                     st.warning("You must accept the terms & conditions and privacy policy to proceed.")
                 else:
                     try:
-                        ss = ezsheets.Spreadsheet('152M9yVlljFVDf5Nnd2oBjWfvxf5Sfy2n2H7Sz5__1F4')
+                        # ss = ezsheets.Spreadsheet('152M9yVlljFVDf5Nnd2oBjWfvxf5Sfy2n2H7Sz5__1F4')
                         sheet = ss['Login Credentials']
 
                         sheet.updateRow((sheet.rowCount + 1), [first_name, last_name, dob.strftime('%Y-%m-%d'), gender, address1, address2, phone_number, email, password, datetime.now().strftime('%d-%m-%Y  %H:%M:%S')])
