@@ -6,13 +6,12 @@ import ezsheets
 
 
 class login_signup:
-
     def login():
         st.text("")
         username = st.text_input("Email or phone number")
         password = st.text_input("Password", type="password")
-
         st.text("")
+
         col1, col2, col3 = st.columns([2,2.3,2])
         with col2:
             col2_1, col2_2 = st.columns([1, 2]) 
